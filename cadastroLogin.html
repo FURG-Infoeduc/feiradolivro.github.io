@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase Authentication</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+</head>
+
+<body>
+    <main class="container-fluid">
+        <div class="row" style="margin:20px;">
+            <h1>Cadastro Email e Senha</h1>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-3 text-center">
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="E-mail" aria-label="E-mail" aria-describedby="email">
+                    <div class="input-group-append">
+                        <span class="input-group-text">Email</span>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" id="senha" placeholder="Senha" aria-label="Senha" aria-describedby="senha">
+                    <div class="input-group-append">
+                        <span class="input-group-text">Senha</span>
+                    </div>
+                </div>
+                <button class="btn btn-success" onclick="createLogin()">Criar conta</button>
+                <button class="btn btn-danger" onclick="deletarUsuario()">Deletar Usuário</button>
+                <hr>
+            </div>
+        </div>
+    </main>
+
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+
+    <!-- Inicializa o firebase -->
+    <script>
+        var config = {
+            apiKey: "AIzaSyAvvpGRrIpqK4hkYuY5OEum8jESNKs4mMA",
+            authDomain: "saicix.firebaseapp.com",
+            databaseURL: "https://saicix.firebaseio.com",
+            projectId: "saicix",
+            storageBucket: "saicix.appspot.com",
+            messagingSenderId: "718317606255",
+            appId: "1:718317606255:web:3843144e042fedfc"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <!-- Nosso app -->
+    <script src="./cadastroLogin.js"></script>
+
+</body>
+
+</html>
