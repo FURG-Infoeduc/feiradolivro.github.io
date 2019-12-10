@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>INCLUSÃO DADOS</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="shortcut icon" href="book.png" type="image/x-icon" />
+</head>
+
+<body>
+    <nav class="topnav">
+        <ul>
+            <li><a href="noticias.html">Feed</a></li>
+            <li><a href="home.html">Eventos</a></li>
+            <li><a href="parceiros.html">Parceiros</a></li>
+            <li><a href="patrocinadores.html">Patrocinadores</a></li>
+            <li><a href="organizacao.html">Organizadores</a></li>
+            <li><a href="emails.html" class="active" >E-mails</a></li>
+            <li><a href="dias.html" >Dias</a></li>
+            <li><a href="sobre.html" >Sobre</a></li>
+            <li><a href="download.html" >Download</a></li>
+            <li><a href="index.html" onclick="logout()" style="float:right">Logout</a>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="container2">
+            
+            <div class="card-container">
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <!-- Inicializa o firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCRsI6D8ggjqsj5bG8IAA3VLOSdUaeKTCw",
+            authDomain: "feira-do-livro-6baa6.firebaseapp.com",
+            databaseURL: "https://feira-do-livro-6baa6.firebaseio.com",
+            projectId: "feira-do-livro-6baa6",
+            storageBucket: "feira-do-livro-6baa6.appspot.com",
+            messagingSenderId: "331672139243",
+            appId: "1:331672139243:web:fe5a3149048b1617aa55ae",
+            measurementId: "G-1HW5F0T00L"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Nosso app -->
+    <script src="./appmails.js"></script>
+</body>
+
+</html>
